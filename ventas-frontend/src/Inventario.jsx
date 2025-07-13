@@ -5,7 +5,9 @@ export default function Inventario() {
   const [cargando, setCargando] = useState(true);
 
   useEffect(() => {
-    fetch("http://localhost:8000/inventario")
+    fetch(`${import.meta.env.VITE_BACKEND_URL}/inventario`)
+
+
       .then((res) => res.json())
       .then((data) => {
         setProductos(data);
