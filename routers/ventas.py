@@ -3,6 +3,8 @@ from fastapi import APIRouter, HTTPException
 import sqlite3
 import datetime
 
+router = APIRouter(prefix="/ventas")  # 👈 esto agrega prefijo a todas las rutas
+
 router = APIRouter()
 
 DB_NAME = "database.db"

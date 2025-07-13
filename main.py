@@ -6,6 +6,10 @@ app = FastAPI()
 
 origins = ["*"]  # en producción puedes restringirlo
 
+@app.get("/")
+def root():
+    return {"mensaje": "API funcionando correctamente"}
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
