@@ -1,0 +1,6 @@
+# Ignorar node_modules y otras carpetas generadas
+node_modules/
+dist/
+.env
+.DS_Store
+.vscode
