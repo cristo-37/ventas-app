@@ -1,6 +1,9 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from routers.ventas import router as ventas_router
+from routers.inventario import router as inventario_router
+
+
 
 app = FastAPI()
 
@@ -19,4 +22,5 @@ app.add_middleware(
 )
 
 app.include_router(ventas_router)
+app.include_router(inventario_router)
 
